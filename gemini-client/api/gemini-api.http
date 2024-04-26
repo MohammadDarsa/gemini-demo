@@ -1,0 +1,17 @@
+POST https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={{gemini-key}}
+Content-Type: application/json
+
+{
+  "contents":
+  [
+    {
+      "parts":
+        [{
+          "text": "give me an action and only the action from the following list of actions that its description matches the query given the most, if there's no very precise action then respond with 'none'.\nactions:\n- fetch_flights: fetches all the flights with filtering\n- book_flight: books a single flight given its ID\n- fetch_books: fetches all the books in the library\n- fetch_tickets: fetches all the user tickets that the user currently holds\n- save_ticket: saves or update a ticket for the user\n\n\nquery: 'please book me the flight on 17 march\n\nyour answer should only include the action or none in case there's no suitable action and nothing else, no other text."
+        }]
+    }
+  ]
+}
+
+>> gemini-api.json
+###
